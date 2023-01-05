@@ -10,7 +10,6 @@ public class MemoryMemberRepository implements MemberRepository{
 
     private static Map<Long, Member> store = new HashMap<>();//임시의 자체 DB 생성
                                                             //HashMap 은 동시성 이슈가 발생할 수 있다. 이런 경우 ConcurrentHashMap 을 사용하자.
-
     @Override
     public void save(Member member) {
         store.put(member.getId(), member);
