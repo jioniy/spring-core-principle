@@ -24,7 +24,7 @@ public class RateDiscountPolicyTest {
 
     @Test
     @DisplayName("VIP가 아니면 할인이 적용되지 않아야 한다.")
-    void vip_x(){
+    void vip_x(){//반대의 경우도 테스트 설계에 반영해야한다.
         Member member = new Member(2L, "memberBASIC", Grade.BASIC);
 
         int discount = discountPolicy.discount(member, 10000);
